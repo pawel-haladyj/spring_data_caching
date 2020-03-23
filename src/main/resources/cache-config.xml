@@ -1,0 +1,21 @@
+<config xmlns="http://www.ehcache.org/v3">
+    <cache alias="customer" uses-template="customer"/>
+    <cache alias="default" uses-template="default"/>
+    <cache-template name="customer">
+        <expiry>
+            <ttl unit="seconds">60</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">2000</heap>
+        </resources>
+    </cache-template>
+    <cache-template name="default">
+        <expiry>
+            <ttl unit="seconds">60</ttl>
+        </expiry>
+
+        <resources>
+            <heap unit="entries">2000</heap>
+        </resources>
+    </cache-template>
+</config>
